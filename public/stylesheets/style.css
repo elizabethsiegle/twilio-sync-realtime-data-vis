@@ -1,8 +1,197 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 60vw;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: grid;
+}
+
+.survey {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  border-radius: 0.15rem;
+  border-top: 1px dashed #ececec;
+  border-bottom: 1px dashed #ececec;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 85vw;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: unset;
+  }
+  .main {
+    width: 97vw;
+    /* box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); */
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+}
+
+.nominees {
+  background-color: whitesmoke;
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+}
+
+.chart {
+  padding: 0 0.5rem;
+}
+
+.count {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.count h1 {
+  font-size: 1.3rem;
+}
+
+h1.visible {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.stats {
+  padding-top: 3rem;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.summary .individual-count,
+.summary .individual-nominee {
+  border: 1px solid #ececec;
+}
+
+.summary .individual-nominee {
+  background-color: whitesmoke;
+}
+
+.summary div {
+  place-content: center;
+}
+
+.summary h1 {
+  text-align: center;
+}
+
+.summary h2 {
+  font-weight: 100;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+form button {
+  background-color: #0099e5;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 0.1rem;
+  color: white;
+}
+
+/* custom radio buttons
+  lifted from: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+*/
+
+/* Customize the label (the container) */
+.wrapper {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.wrapper:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.wrapper input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.wrapper .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
