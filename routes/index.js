@@ -13,11 +13,11 @@ const syncServiceSid = process.env.TWILIO_SYNC_SERVICE_SID || "default";
 // create a document resource, providing it a Sync service resource SID
 syncService.documents
   .create({
-    uniqueName: "SportsPoll",
+    uniqueName: "StocksPoll",
     data: {
-      basketball: 0,
-      cricket: 0,
-      football: 0
+      hold: 0,
+      sell: 0,
+      buy: 0
     }
   })
   .then(document => console.log(document));
@@ -39,7 +39,7 @@ router.get("/", function(req, res, next) {
   });
   token.addGrant(syncGrant);
 
-  res.render("index", { title: "Sports Poll", token: token.toJwt() });
+  res.render("index", { title: "Stocks Poll", token: token.toJwt() });
 });
 
 module.exports = router;

@@ -13,7 +13,7 @@ class VoteChart {
       return new Chart(context, {
         type: "bar",
         data: {
-          labels: ["Basketball", "Cricket", "Football"],
+          labels: ["Hold", "Sell", "Buy"],
           datasets: [
             {
               label: "Count",
@@ -67,9 +67,11 @@ class VoteChart {
     totalCountElement.innerText = totalCount;
   
     for (const item in data) {
-      const parent = document.querySelector(`.${item}-summary`);
-      const element = parent.querySelector("h1");
-      element.innerText = data[item];
+        console.log(item);
+        console.log(data);
+        const parent = document.querySelector(`.${item}-summary`);
+        const element = parent.querySelector("h1");
+        element.innerText = data[item];
     }
   };
 
@@ -109,9 +111,9 @@ syncClient.on("connectionStateChanged", state => {
   }
 });
 
-// Open SportsPoll document
-syncClient.document("SportsPoll").then(document => {
-    console.log("SportsPoll document loaded");
+// Open StocksPoll document
+syncClient.document("StocksPoll").then(document => {
+    console.log("StocksPoll document loaded");
   
     let data = document.value;
   
