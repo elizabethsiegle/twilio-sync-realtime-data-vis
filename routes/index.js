@@ -16,8 +16,7 @@ syncService.documents
     uniqueName: "StocksPoll",
     data: {
       hold: 0,
-      sell: 0,
-      buy: 0
+      sell: 0
     }
   })
   .then(document => console.log(document));

@@ -5,8 +5,7 @@ const syncService = require("../syncService");
 
 const voteCount = {
   hold: 0,
-  sell: 0,
-  buy: 0
+  sell: 0
 };
 
 /* POST handle survey votes. */

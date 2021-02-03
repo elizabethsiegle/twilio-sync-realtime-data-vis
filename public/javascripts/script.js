@@ -1,7 +1,7 @@
 class VoteChart {
     constructor() {
       // data values for chart
-      this.chartData = [0, 0, 0];
+      this.chartData = [0, 0];
       // instantiate a new chart
       this.chart = this.barChart();
     }
@@ -13,20 +13,18 @@ class VoteChart {
       return new Chart(context, {
         type: "bar",
         data: {
-          labels: ["Hold", "Sell", "Buy"],
+          labels: ["Hold", "Sell"],
           datasets: [
             {
               label: "Count",
               data: this.chartData,
               backgroundColor: [
                 "rgba(255, 99, 132, 0.2)",
-                "rgba(54, 162, 235, 0.2)",
-                "rgba(255, 206, 86, 0.2)"
+                "rgba(54, 162, 235, 0.2)"
               ],
               borderColor: [
                 "rgba(255, 99, 132, 1)",
-                "rgba(54, 162, 235, 1)",
-                "rgba(255, 206, 86, 1)"
+                "rgba(54, 162, 235, 1)"
               ],
               borderWidth: 1,
               barPercentage: 0.4
