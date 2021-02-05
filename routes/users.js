@@ -4,9 +4,9 @@ const router = express.Router();
 const syncService = require("../syncService");
 
 const voteCount = {
-  basketball: 0,
-  cricket: 0,
-  football: 0
+  buy: 0,
+  sell: 0,
+  hold: 0
 };
 
 /* POST handle survey votes. */
@@ -16,7 +16,7 @@ router.post("/", function(req, res, next) {
 
   // update data in Sync document
   syncService
-    .documents("SportsPoll")
+    .documents("Stock3Poll")
     .update({ data: voteCount })
     .then(document => console.log(document));
 

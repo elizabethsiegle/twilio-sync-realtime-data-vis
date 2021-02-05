@@ -13,7 +13,7 @@ class VoteChart {
       return new Chart(context, {
         type: "bar",
         data: {
-          labels: ["Basketball", "Cricket", "Football"],
+          labels: ["Buy", "Sell", "Hold"],
           datasets: [
             {
               label: "Count",
@@ -110,8 +110,8 @@ syncClient.on("connectionStateChanged", state => {
 });
 
 // Open SportsPoll document
-syncClient.document("SportsPoll").then(document => {
-    console.log("SportsPoll document loaded");
+syncClient.document("Stock3Poll").then(document => {
+    console.log("Stock3 document loaded");
   
     let data = document.value;
   
