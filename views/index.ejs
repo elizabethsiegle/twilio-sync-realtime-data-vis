@@ -1,80 +1,76 @@
 <html>
   <h1>
-Should you buy, sell, or hold GameStop?
-            </h1>
-          <div class="form">
-            <form>
-              <div class="form-group">
-                <label for="buy" class="wrapper">
-                  Buy
-                  <input type="radio" name="vote" id="buy" required />
-                  <span class="checkmark"></span>
-                </label>
-              </div>
-              <div class="form-group">
-                <label for="sell" class="wrapper">
-                  Sell
-                  <input type="radio" name="vote" id="sell" required />
-                  <span class="checkmark"></span>
-                </label>
-              </div>
-              <div class="form-group">
-                <label for="hold" class="wrapper">
-                  Hold
-                  <input type="radio" name="vote" id="hold" required />
-                  <span class="checkmark"></span>
-                </label>
-              </div>
-
-              <div class="form-group">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="chart">
-          <canvas id="voteChart" width="25%" height="5%"></canvas>
-        </div>
+    Should you buy, sell, or hold GameStop?
+  </h1>
+  <div class="form">
+    <form>
+      <div class="form-group">
+        <label for="buy" class="wrapper">
+          Buy
+          <input type="radio" name="vote" id="buy" required />
+          <span class="checkmark"></span>
+        </label>
       </div>
-      <div class="stats">
-        <div class="count">
-          <h1 class="">Total Count</h1>
-          <h1 class="visible total-count">0</h1>
-        </div>
-        <div class="summary">
-          <div class="buy-summary">
-            <div class="individual-count">
-              <h1>0</h1>
-            </div>
-            <div class="individual-nominee">
-              <h2>Buy</h2>
-            </div>
-          </div>
-          <div class="sell-summary">
-            <div class="individual-count">
-              <h1>0</h1>
-            </div>
-            <div class="individual-nominee">
-              <h2>Sell</h2>
-            </div>
-          </div>
-          <div class="hold-summary">
-            <div class="individual-count">
-              <h1>0</h1>
-            </div>
-            <div class="individual-nominee">
-              <h2>Hold</h2>
-            </div>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="sell" class="wrapper">
+          Sell
+          <input type="radio" name="vote" id="sell" required />
+          <span class="checkmark"></span>
+        </label>
       </div>
-    </main>
+      <div class="form-group">
+        <label for="hold" class="wrapper">
+          Hold
+          <input type="radio" name="vote" id="hold" required />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    </div>
   </div>
+  <div class="chart">
+    <canvas id="voteChart" width="25%" height="5%"></canvas>
+  </div>
+  <div class="stats">
+    <div class="count">
+      <h1 class="">Total Count</h1>
+      <h1 class="visible total-count">0</h1>
+    </div>
+    <div class="summary">
+      <div class="buy-summary">
+        <div class="individual-count">
+          <h1>0</h1>
+        </div>
+        <div class="individual-nominee">
+          <h2>Buy</h2>
+        </div>
+      </div>
+      <div class="sell-summary">
+        <div class="individual-count">
+          <h1>0</h1>
+        </div>
+        <div class="individual-nominee">
+          <h2>Sell</h2>
+        </div>
+      </div>
+      <div class="hold-summary">
+        <div class="individual-count">
+          <h1>0</h1>
+        </div>
+        <div class="individual-nominee">
+          <h2>Hold</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-  <script type="text/javascript" src="//media.twiliocdn.com/sdk/js/sync/v0.12/twilio-sync.min.js"></script>
-  <script>let token = <%- JSON.stringify(token) %>;</script>
-  <script src="/javascripts/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script type="text/javascript" src="//media.twiliocdn.com/sdk/js/sync/v0.12/twilio-sync.min.js"></script>
+<script>let token = <%- JSON.stringify(token) %>;</script>
+<script src="/javascripts/script.js"></script>
 </body>
-
 </html>
